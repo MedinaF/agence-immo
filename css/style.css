@@ -1,0 +1,222 @@
+:root {
+  --primary-color: rgb(0, 128, 128);
+  --primary-color-transparent: rgba(0, 128, 128, 0.5);
+  --secondary-color: rgb(0, 51, 102);
+  --black-transparent: rgba(0, 0, 0, 0.3);
+  --main-font: Montserrat, sans-serif;
+  --footer-background-color: #20232a;
+}
+
+html {
+  font-size: 16px;
+  @media (max-width: 768px) {
+    font-size: 12px;
+  }
+  @media (max-width: 450px) {
+    font-size: 10px;
+  }
+  body {
+    margin: 0;
+    font-family: var(--main-font);
+    a a:visited,
+    a:hover,
+    a:active {
+      text-decoration: none;
+      color: inherit;
+    }
+    @media (max-width: 768px) {
+      font-size: 15px;
+    }
+    @media (max-width: 450px) {
+      font-size: 12px;
+    }
+
+    ul {
+      padding: 0;
+      list-style: none;
+    }
+
+    .container {
+      max-width: 1060px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .btn {
+      color: white;
+      background-color: var(--primary-color);
+      padding: 10px;
+      text-decoration: none;
+    }
+    .btn:hover {
+      color: white;
+      background-color: var(--secondary-color);
+    }
+
+    h3 {
+      font-weight: bold;
+      font-size: 25px;
+    }
+
+    header {
+      background-image: linear-gradient(
+          to right,
+          var(--primary-color-transparent),
+          var(--primary-color-transparent)
+        ),
+        url(../img/header_image.avif);
+      background-size: cover;
+      background-position: center;
+      object-position: 0 100%;
+
+      /* filter: blur(2px); */
+      height: 19rem;
+      color: white;
+
+      @media (max-width: 768px) {
+        background-position: right;
+      }
+
+      h1,
+      h2 {
+        text-align: center;
+        flex-direction: column;
+        align-items: center;
+      }
+
+      h1 {
+        font-style: italic;
+        font-size: 80px;
+        font-weight: bold;
+        margin: 0;
+      }
+
+      img {
+        height: 60px;
+      }
+      nav {
+        ul {
+          display: flex;
+          justify-content: center;
+          li {
+            a {
+              color: inherit;
+              margin: 0 10px;
+              text-decoration: none;
+            }
+          }
+        }
+      }
+    }
+    main {
+      section#objectives {
+        div.container {
+          text-align: center;
+          @media (max-width: 1150px) {
+            width: 60rem;
+            max-width: calc(90vw);
+          }
+          @media (max-width: 768px) {
+            width: 50rem;
+          }
+          @media (max-width: 600px) {
+            width: 40rem;
+          }
+          @media (max-width: 450px) {
+            width: 30rem;
+          }
+          h3 {
+            color: var(--primary-color);
+            text-decoration: underline;
+          }
+          p {
+            color: var(--primary-color);
+          }
+        }
+      }
+      section#services {
+        ul {
+          display: flex;
+          justify-content: center;
+          margin-bottom: 0;
+
+          li {
+            width: 50%;
+            border: 1px solid rgb(235, 235, 235);
+            padding: 40px 10px 30px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            img {
+              height: 50px;
+            }
+          }
+        }
+      }
+      section#partner {
+        background-image: linear-gradient(
+            to right,
+            var(--primary-color-transparent),
+            var(--black-transparent)
+          ),
+          url(../img/main_image.avif);
+        background-position: 0 60%;
+        height: 300px;
+        color: white;
+        article {
+          float: inline-end;
+          margin: 50px;
+        }
+      }
+      section#immo-world {
+        height: 300px;
+        margin-bottom: 10px;
+
+        h3 {
+          color: var(--primary-color);
+        }
+        div {
+          display: flex;
+          color: grey;
+          ul {
+            display: flex;
+            li {
+              p {
+                display: flex;
+                flex-direction: column;
+                span {
+                  font-weight: bold;
+                  color: var(--secondary-color);
+                  font-size: 35px;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+    footer {
+      background-color: var(--footer-background-color);
+      color: white;
+      h3 {
+        color: var(--primary-color);
+        font-size: 15px;
+      }
+      div.container {
+        display: flex;
+        flex-wrap: nowrap;
+        ul {
+          li {
+          }
+        }
+        article {
+          margin-left: 100px;
+          margin-top: 50px;
+          img {
+            height: 60px;
+          }
+        }
+      }
+    }
+  }
+}
